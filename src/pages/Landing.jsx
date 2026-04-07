@@ -13,7 +13,7 @@ const features = [
   { icon: Zap, label: 'Instant', desc: 'Real-time analysis as you type', color: '#f59e0b' },
 ];
 
-const ETHER_COLORS = ['#5227FF', '#FF9FFC', '#00d4ff'];
+const ETHER_COLORS = ['#285A48', '#408A71', '#B0E4CC'];
 
 export default function Landing() {
   const navigate = useNavigate();
@@ -63,13 +63,13 @@ export default function Landing() {
           transition={{ delay: 0.2 }}
           style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.2)',
+            background: 'rgba(64,138,113,0.08)', border: '1px solid rgba(64,138,113,0.2)',
             borderRadius: 20, padding: '6px 16px', marginBottom: 32,
-            fontSize: 12, fontWeight: 600, color: '#00d4ff', letterSpacing: '0.08em'
+            fontSize: 12, fontWeight: 600, color: '#408A71', letterSpacing: '0.08em'
           }}
           className="animate-float-1"
         >
-          <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#00d4ff', boxShadow: '0 0 8px #00d4ff', display: 'inline-block' }} />
+          <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#408A71', boxShadow: '0 0 8px #408A71', display: 'inline-block' }} />
           DATABASE NORMALIZATION VISUALIZER
         </motion.div>
 
@@ -88,7 +88,7 @@ export default function Landing() {
           }}
         >
           <span className="gradient-text">Norm</span>
-          <span style={{ color: 'rgba(255,255,255,0.95)' }}>Viz</span>
+          <span style={{ color: '#B0E4CC' }}>Viz</span>
         </motion.h1>
 
         {/* Tagline */}
@@ -107,7 +107,7 @@ export default function Landing() {
           }}
         >
           Visualize Database Normalization{' '}
-          <span style={{ color: '#00d4ff', fontWeight: 600 }}>Like Never Before</span>
+          <span style={{ color: '#408A71', fontWeight: 600 }}>Like Never Before</span>
           <br />
           <span style={{ fontSize: '0.8em', color: 'rgba(255,255,255,0.35)' }}>
             1NF → 2NF → 3NF → BCNF → 4NF → 5NF

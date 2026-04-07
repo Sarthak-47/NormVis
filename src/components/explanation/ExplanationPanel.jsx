@@ -27,7 +27,7 @@ export default function ExplanationPanel({ schema, results, activeTab }) {
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <h2 style={{ fontSize: 14, fontWeight: 700, color: '#00d4ff', letterSpacing: '0.05em' }}>
+        <h2 style={{ fontSize: 14, fontWeight: 700, color: '#408A71', letterSpacing: '0.05em' }}>
           EXPLANATION
         </h2>
         <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginTop: 2 }}>
@@ -58,8 +58,8 @@ export default function ExplanationPanel({ schema, results, activeTab }) {
                     : r
                       ? 'rgba(239,68,68,0.2)'
                       : 'rgba(255,255,255,0.05)',
-                  border: `1px solid ${r?.satisfied ? '#10b981' : r ? '#ef4444' : 'rgba(255,255,255,0.1)'}`,
-                  color: r?.satisfied ? '#10b981' : r ? '#f87171' : 'rgba(255,255,255,0.3)',
+                  border: `1px solid ${r?.satisfied ? '#408A71' : r ? '#ef4444' : 'rgba(255,255,255,0.1)'}`,
+                  color: r?.satisfied ? '#408A71' : r ? '#f87171' : 'rgba(255,255,255,0.3)',
                 }}>
                   {r?.satisfied ? '✓' : r ? '✗' : i + 1}
                 </div>
@@ -67,12 +67,12 @@ export default function ExplanationPanel({ schema, results, activeTab }) {
                   <div className="flex items-center justify-between">
                     <span style={{
                       fontSize: 12, fontWeight: isActive ? 700 : 500,
-                      color: isActive ? '#00d4ff' : isFuture ? 'rgba(255,255,255,0.35)' : 'rgba(255,255,255,0.65)'
+                      color: isActive ? '#408A71' : isFuture ? 'rgba(255,255,255,0.35)' : 'rgba(255,255,255,0.65)'
                     }}>
                       {nf}
                     </span>
                     {r && (
-                      <span style={{ fontSize: 10, color: r.satisfied ? '#10b981' : '#f87171', fontWeight: 600 }}>
+                      <span style={{ fontSize: 10, color: r.satisfied ? '#408A71' : '#f87171', fontWeight: 600 }}>
                         {r.satisfied ? 'PASS' : 'FAIL'}
                       </span>
                     )}
@@ -98,7 +98,7 @@ export default function ExplanationPanel({ schema, results, activeTab }) {
       {/* Attribute Closure Summary */}
       <div>
         <div className="flex items-center gap-2" style={{ marginBottom: 10 }}>
-          <Cpu size={13} color="#00d4ff" />
+          <Cpu size={13} color="#408A71" />
           <p style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.07em' }}>
             ATTRIBUTE CLOSURES
           </p>
@@ -116,9 +116,9 @@ export default function ExplanationPanel({ schema, results, activeTab }) {
                 fontFamily: 'Space Grotesk, monospace'
               }}
             >
-              <span style={{ color: '#00d4ff', fontWeight: 700, fontSize: 12 }}>{attr}</span>
+              <span style={{ color: '#408A71', fontWeight: 700, fontSize: 12 }}>{attr}</span>
               <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 12 }}>⁺ = </span>
-              <span style={{ color: '#a78bfa', fontSize: 12 }}>{'{'}{closure.join(', ')}{'}'}</span>
+              <span style={{ color: '#B0E4CC', fontSize: 12 }}>{'{'}{closure.join(', ')}{'}'}</span>
               {closure.length === schema.attributes.length && (
                 <span style={{ marginLeft: 6, fontSize: 10, color: '#10b981', fontWeight: 600 }}>← SUPERKEY</span>
               )}
@@ -138,7 +138,7 @@ export default function ExplanationPanel({ schema, results, activeTab }) {
       {result && (
         <div>
           <div className="flex items-center gap-2" style={{ marginBottom: 10 }}>
-            <Database size={13} color="#00d4ff" />
+            <Database size={13} color="#408A71" />
             <p style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.07em' }}>
               {activeTab} ANALYSIS
             </p>

@@ -17,14 +17,14 @@ export default function GravityToggle({ gravityMode, onToggle }) {
           width: 52,
           height: 28,
           borderRadius: 14,
-          border: `1px solid ${gravityMode ? 'rgba(124,58,237,0.5)' : 'rgba(0,212,255,0.5)'}`,
+          border: `1px solid ${gravityMode ? 'rgba(64,138,113,0.5)' : 'rgba(40,90,72,0.5)'}`,
           background: gravityMode
-            ? 'linear-gradient(135deg, rgba(124,58,237,0.25), rgba(139,92,246,0.15))'
-            : 'linear-gradient(135deg, rgba(0,212,255,0.25), rgba(6,182,212,0.15))',
+            ? 'linear-gradient(135deg, rgba(64,138,113,0.25), rgba(49,106,87,0.15))'
+            : 'linear-gradient(135deg, rgba(40,90,72,0.25), rgba(19,44,42,0.15))',
           cursor: 'pointer',
           boxShadow: gravityMode
-            ? '0 0 15px rgba(124,58,237,0.3)'
-            : '0 0 15px rgba(0,212,255,0.3)',
+            ? '0 0 15px rgba(64,138,113,0.3)'
+            : '0 0 15px rgba(40,90,72,0.3)',
           transition: 'all 0.4s ease',
           backdropFilter: 'blur(10px)',
         }}
@@ -39,14 +39,14 @@ export default function GravityToggle({ gravityMode, onToggle }) {
             width: 20, height: 20,
             borderRadius: '50%',
             background: gravityMode
-              ? 'linear-gradient(135deg, #a78bfa, #7c3aed)'
-              : 'linear-gradient(135deg, #00d4ff, #06b6d4)',
+              ? 'linear-gradient(135deg, #B0E4CC, #408A71)'
+              : 'linear-gradient(135deg, #408A71, #285A48)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             boxShadow: gravityMode
-              ? '0 0 8px rgba(124,58,237,0.6)'
-              : '0 0 8px rgba(0,212,255,0.6)',
+              ? '0 0 8px rgba(176,228,204,0.6)'
+              : '0 0 8px rgba(64,138,113,0.6)',
           }}
         >
           {gravityMode
@@ -56,7 +56,7 @@ export default function GravityToggle({ gravityMode, onToggle }) {
       </motion.button>
       <span style={{
         fontSize: 11,
-        color: gravityMode ? '#a78bfa' : '#00d4ff',
+        color: gravityMode ? '#B0E4CC' : '#408A71',
         fontWeight: 600,
         letterSpacing: '0.03em',
         transition: 'color 0.3s'

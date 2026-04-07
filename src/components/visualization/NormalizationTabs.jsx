@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 const TABS = ['1NF', '2NF', '3NF', 'BCNF', '4NF', '5NF'];
 
 const TAB_COLORS = {
-  '1NF':  { active: '#00d4ff', shadow: 'rgba(0,212,255,0.3)' },
-  '2NF':  { active: '#06b6d4', shadow: 'rgba(6,182,212,0.3)' },
-  '3NF':  { active: '#3b82f6', shadow: 'rgba(59,130,246,0.3)' },
-  'BCNF': { active: '#8b5cf6', shadow: 'rgba(139,92,246,0.3)' },
-  '4NF':  { active: '#a78bfa', shadow: 'rgba(167,139,250,0.3)' },
-  '5NF':  { active: '#ec4899', shadow: 'rgba(236,72,153,0.3)' },
+  '1NF':  { active: '#B0E4CC', shadow: 'rgba(176,228,204,0.3)' },
+  '2NF':  { active: '#8eccb5', shadow: 'rgba(142,204,181,0.3)' },
+  '3NF':  { active: '#6db49d', shadow: 'rgba(109,180,157,0.3)' },
+  'BCNF': { active: '#4a9c86', shadow: 'rgba(74,156,134,0.3)' },
+  '4NF':  { active: '#28846e', shadow: 'rgba(40,132,110,0.3)' },
+  '5NF':  { active: '#066d57', shadow: 'rgba(6,109,87,0.3)' },
 };
 
 export default function NormalizationTabs({ activeTab, onTabChange, results }) {
@@ -56,8 +56,8 @@ export default function NormalizationTabs({ activeTab, onTabChange, results }) {
                 top: 5, right: 5,
                 width: 6, height: 6,
                 borderRadius: '50%',
-                background: satisfied ? '#10b981' : '#ef4444',
-                boxShadow: satisfied ? '0 0 6px #10b981' : '0 0 6px #ef4444',
+                background: satisfied ? '#408A71' : '#ef4444',
+                boxShadow: satisfied ? '0 0 6px #408A71' : '0 0 6px #ef4444',
               }} />
             )}
             {/* Active underline */}

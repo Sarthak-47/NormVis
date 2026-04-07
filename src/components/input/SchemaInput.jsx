@@ -126,7 +126,7 @@ export default function SchemaInput({ onNormalize, isLoading }) {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 style={{ fontSize: 16, fontWeight: 700, color: '#00d4ff', letterSpacing: '0.05em' }}>
+          <h2 style={{ fontSize: 16, fontWeight: 700, color: '#408A71', letterSpacing: '0.05em' }}>
             SCHEMA INPUT
           </h2>
           <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 2 }}>
@@ -172,8 +172,8 @@ export default function SchemaInput({ onNormalize, isLoading }) {
           <div className="flex flex-wrap gap-1" style={{ marginTop: 6 }}>
             {attributes.split(',').map(a => a.trim()).filter(Boolean).map(attr => (
               <span key={attr} style={{
-                background: 'rgba(0,212,255,0.1)', border: '1px solid rgba(0,212,255,0.25)',
-                borderRadius: 5, padding: '2px 8px', fontSize: 12, color: '#00d4ff', fontFamily: 'Space Grotesk, monospace'
+                background: 'rgba(64,138,113,0.1)', border: '1px solid rgba(64,138,113,0.25)',
+                borderRadius: 5, padding: '2px 8px', fontSize: 12, color: '#B0E4CC', fontFamily: 'Space Grotesk, monospace'
               }}>
                 {attr}
               </span>
@@ -210,7 +210,7 @@ export default function SchemaInput({ onNormalize, isLoading }) {
                   placeholder="A, B"
                   style={{ flex: 1 }}
                 />
-                <div style={{ display: 'flex', alignItems: 'center', color: '#00d4ff' }}>
+                <div style={{ display: 'flex', alignItems: 'center', color: '#B0E4CC' }}>
                   <ArrowRight size={16} />
                 </div>
                 <input
@@ -241,7 +241,7 @@ export default function SchemaInput({ onNormalize, isLoading }) {
           style={{
             background: 'none', border: 'none', cursor: 'pointer',
             display: 'flex', alignItems: 'center', gap: 6,
-            color: showMvd ? '#a78bfa' : 'rgba(255,255,255,0.4)',
+            color: showMvd ? '#B0E4CC' : 'rgba(255,255,255,0.4)',
             fontSize: 11, fontWeight: 600, letterSpacing: '0.08em',
             marginBottom: showMvd ? 8 : 0, transition: 'color 0.2s'
           }}
@@ -262,7 +262,7 @@ export default function SchemaInput({ onNormalize, isLoading }) {
                 {mvds.map((mvd, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <input className="neon-input" value={mvd.lhs} onChange={e => updateMvd(i, 'lhs', e.target.value)} placeholder="A" style={{ flex: 1 }} />
-                    <span style={{ color: '#a78bfa', fontSize: 14, fontWeight: 700, whiteSpace: 'nowrap' }}>↠</span>
+                    <span style={{ color: '#B0E4CC', fontSize: 14, fontWeight: 700, whiteSpace: 'nowrap' }}>↠</span>
                     <input className="neon-input" value={mvd.rhs} onChange={e => updateMvd(i, 'rhs', e.target.value)} placeholder="B, C" style={{ flex: 1 }} />
                     <motion.button whileHover={{ scale: 1.1 }} onClick={() => removeMvd(i)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(239,68,68,0.6)', padding: 4 }}>
                       <Trash2 size={14} />
@@ -283,7 +283,7 @@ export default function SchemaInput({ onNormalize, isLoading }) {
           style={{
             background: 'none', border: 'none', cursor: 'pointer',
             display: 'flex', alignItems: 'center', gap: 6,
-            color: showJd ? '#10b981' : 'rgba(255,255,255,0.4)',
+            color: showJd ? '#408A71' : 'rgba(255,255,255,0.4)',
             fontSize: 11, fontWeight: 600, letterSpacing: '0.08em',
             marginBottom: showJd ? 8 : 0, transition: 'color 0.2s'
           }}

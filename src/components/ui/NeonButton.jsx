@@ -12,18 +12,18 @@ export default function NeonButton({
 }) {
   const variants = {
     cyan: {
-      bg: 'linear-gradient(135deg, rgba(0,212,255,0.2), rgba(6,182,212,0.15))',
-      border: 'rgba(0,212,255,0.5)',
-      text: '#00d4ff',
-      shadow: '0 0 20px rgba(0,212,255,0.35)',
-      hoverShadow: '0 0 35px rgba(0,212,255,0.6)',
+      bg: 'linear-gradient(135deg, rgba(64,138,113,0.2), rgba(49,106,87,0.15))',
+      border: 'rgba(64,138,113,0.5)',
+      text: '#B0E4CC',
+      shadow: '0 0 20px rgba(64,138,113,0.35)',
+      hoverShadow: '0 0 35px rgba(64,138,113,0.6)',
     },
     violet: {
-      bg: 'linear-gradient(135deg, rgba(124,58,237,0.2), rgba(139,92,246,0.15))',
-      border: 'rgba(124,58,237,0.5)',
-      text: '#a78bfa',
-      shadow: '0 0 20px rgba(124,58,237,0.35)',
-      hoverShadow: '0 0 35px rgba(124,58,237,0.6)',
+      bg: 'linear-gradient(135deg, rgba(40,90,72,0.2), rgba(19,44,42,0.15))',
+      border: 'rgba(40,90,72,0.5)',
+      text: '#408A71',
+      shadow: '0 0 20px rgba(40,90,72,0.35)',
+      hoverShadow: '0 0 35px rgba(40,90,72,0.6)',
     },
     ghost: {
       bg: 'rgba(255,255,255,0.04)',

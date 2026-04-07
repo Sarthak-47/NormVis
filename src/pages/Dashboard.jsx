@@ -26,7 +26,7 @@ const EXAMPLE_SCHEMA = {
   jds: [],
 };
 
-const ETHER_COLORS = ['#5227FF', '#FF9FFC', '#00d4ff'];
+const ETHER_COLORS = ['#285A48', '#408A71', '#B0E4CC'];
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -122,7 +122,7 @@ export default function Dashboard() {
           <div style={{ width: 1, height: 20, background: 'rgba(255,255,255,0.08)' }} />
           <span style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 800, fontSize: 20, letterSpacing: '-0.02em' }}>
             <span className="gradient-text">Norm</span>
-            <span style={{ color: 'rgba(255,255,255,0.9)' }}>Viz</span>
+            <span style={{ color: '#B0E4CC' }}>Viz</span>
           </span>
           {schema && (
             <span style={{
@@ -144,8 +144,8 @@ export default function Dashboard() {
           )}
           {isLoading && (
             <div className="flex items-center gap-2">
-              <Cpu size={14} color="#00d4ff" style={{ animation: 'spin 1s linear infinite' }} />
-              <span style={{ fontSize: 12, color: '#00d4ff' }}>Analyzing...</span>
+              <Cpu size={14} color="#408A71" style={{ animation: 'spin 1s linear infinite' }} />
+              <span style={{ fontSize: 12, color: '#408A71' }}>Analyzing...</span>
             </div>
           )}
         </div>
@@ -188,10 +188,10 @@ export default function Dashboard() {
           style={{
             position: 'absolute', left: sidebarOpen ? 340 : 0, top: '50%',
             transform: 'translateY(-50%)',
-            zIndex: 20, background: 'rgba(0,212,255,0.15)',
-            border: '1px solid rgba(0,212,255,0.3)', borderLeft: 'none',
+            zIndex: 20, background: 'rgba(64,138,113,0.15)',
+            border: '1px solid rgba(64,138,113,0.3)', borderLeft: 'none',
             borderRadius: '0 8px 8px 0', padding: '10px 4px', cursor: 'pointer',
-            color: '#00d4ff', transition: 'left 0.3s',
+            color: '#408A71', transition: 'left 0.3s',
           }}
         >
           {sidebarOpen ? <ChevronLeft size={14} /> : <ChevronRight size={14} />}
@@ -238,7 +238,7 @@ export default function Dashboard() {
                   Ready to Normalize
                 </h3>
                 <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.25)', maxWidth: 320, margin: '0 auto' }}>
-                  Enter your relation schema and functional dependencies, then click <span style={{ color: '#00d4ff' }}>Normalize</span> to begin.
+                  Enter your relation schema and functional dependencies, then click <span style={{ color: '#408A71' }}>Normalize</span> to begin.
                 </p>
               </motion.div>
             )}
@@ -250,9 +250,9 @@ export default function Dashboard() {
                   transition={{ repeat: Infinity, duration: 1.5, ease: 'linear' }}
                   style={{ display: 'inline-block', marginBottom: 16 }}
                 >
-                  <Cpu size={48} color="#00d4ff" />
+                  <Cpu size={48} color="#408A71" />
                 </motion.div>
-                <p style={{ color: '#00d4ff', fontSize: 16, fontWeight: 600 }}>Analyzing Schema...</p>
+                <p style={{ color: '#408A71', fontSize: 16, fontWeight: 600 }}>Analyzing Schema...</p>
                 <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: 12, marginTop: 6 }}>Computing closures, keys, and violations</p>
               </div>
             )}

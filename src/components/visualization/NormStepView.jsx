@@ -4,42 +4,42 @@ import TableCard from './TableCard.jsx';
 
 const NF_DEFINITIONS = {
   '1NF': {
-    color: '#00d4ff',
+    color: '#B0E4CC',
     icon: '①',
     full: 'First Normal Form',
     rule: 'All attributes contain only atomic (indivisible) values. No repeating groups or multi-valued attributes.',
     howToFix: 'Decompose multi-valued attributes into separate rows or create a separate table for repetitive groups.',
   },
   '2NF': {
-    color: '#06b6d4',
+    color: '#8eccb5',
     icon: '②',
     full: 'Second Normal Form',
     rule: 'Relation is in 1NF AND every non-prime attribute is fully functionally dependent on every candidate key (no partial dependencies).',
     howToFix: 'Remove attributes that depend only on part of a composite key into a separate relation.',
   },
   '3NF': {
-    color: '#3b82f6',
+    color: '#6db49d',
     icon: '③',
     full: 'Third Normal Form',
     rule: 'Relation is in 2NF AND for every FD X→Y, either X is a superkey OR Y is a prime attribute (no transitive dependencies).',
     howToFix: 'Move transitively dependent attributes to a new relation with their determinant as the key.',
   },
   'BCNF': {
-    color: '#8b5cf6',
+    color: '#4a9c86',
     icon: 'B',
     full: 'Boyce-Codd Normal Form',
     rule: 'Relation is in 3NF AND for every non-trivial FD X→Y, X must be a superkey. Stricter than 3NF.',
     howToFix: 'Decompose using the BCNF decomposition algorithm: split on the violating FD.',
   },
   '4NF': {
-    color: '#a78bfa',
+    color: '#28846e',
     icon: '④',
     full: 'Fourth Normal Form',
     rule: 'Relation is in BCNF AND contains no non-trivial multi-valued dependencies (MVDs) where the determinant is not a superkey.',
     howToFix: 'For MVD X ↠ Y, create two relations: one for X∪Y and one for X∪(R−Y).',
   },
   '5NF': {
-    color: '#ec4899',
+    color: '#066d57',
     icon: '⑤',
     full: 'Fifth Normal Form (PJNF)',
     rule: 'Relation is in 4NF AND every non-trivial join dependency is implied by the candidate keys.',
@@ -173,12 +173,12 @@ export default function NormStepView({ tab, result, decomposition, schema, anima
                     <XCircle size={13} color="#f87171" />
                     <span style={{ fontSize: 12, fontWeight: 600, color: '#f87171' }}>{v.type}</span>
                     {v.determinant && (
-                      <span style={{ fontFamily: 'Space Grotesk, monospace', fontSize: 11, color: '#00d4ff' }}>
+                      <span style={{ fontFamily: 'Space Grotesk, monospace', fontSize: 11, color: '#408A71' }}>
                         {'{' + (Array.isArray(v.determinant) ? v.determinant.join(', ') : v.determinant) + '}'}
                         {v.determined && (
                           <>
                             <ArrowRight size={10} style={{ display: 'inline', margin: '0 3px' }} />
-                            <span style={{ color: '#a78bfa' }}>{'{' + (Array.isArray(v.determined) ? v.determined.join(', ') : v.determined) + '}'}</span>
+                            <span style={{ color: '#B0E4CC' }}>{'{' + (Array.isArray(v.determined) ? v.determined.join(', ') : v.determined) + '}'}</span>
                           </>
                         )}
                         {v.components && <span style={{ color: '#a78bfa' }}> ⋈{v.components.join(', ')}</span>}
@@ -240,9 +240,9 @@ export default function NormStepView({ tab, result, decomposition, schema, anima
             </p>
             {result.mvds.map((mvd, i) => (
               <div key={i} style={{ fontFamily: 'Space Grotesk, monospace', fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 3 }}>
-                <span style={{ color: '#a78bfa' }}>{'{' + mvd.lhs.join(', ') + '}'}</span>
-                <span style={{ margin: '0 6px', color: '#a78bfa', fontWeight: 700 }}>↠</span>
-                <span style={{ color: '#00d4ff' }}>{'{' + mvd.rhs.join(', ') + '}'}</span>
+                <span style={{ color: '#408A71' }}>{'{' + mvd.lhs.join(', ') + '}'}</span>
+                <span style={{ margin: '0 6px', color: '#408A71', fontWeight: 700 }}>↠</span>
+                <span style={{ color: '#B0E4CC' }}>{'{' + mvd.rhs.join(', ') + '}'}</span>
               </div>
             ))}
           </div>

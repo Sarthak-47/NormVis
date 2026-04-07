@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @theme {
-  --color-space-black: #050816;
-  --color-space-dark: #0d0f1e;
-  --color-space-card: rgba(13, 15, 30, 0.6);
-  --color-neon-cyan: #00d4ff;
-  --color-neon-violet: #7c3aed;
-  --color-neon-blue: #3b82f6;
-  --color-neon-pink: #ec4899;
-  --color-neon-green: #10b981;
-  --color-glass-bg: rgba(255, 255, 255, 0.04);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
-  --color-glass-hover: rgba(255, 255, 255, 0.08);
+  --color-space-black: #091413;
+  --color-space-dark: #132c2a;
+  --color-space-card: rgba(40, 90, 72, 0.4);
+  --color-neon-cyan: #408A71;
+  --color-neon-violet: #285A48;
+  --color-neon-blue: #316a57;
+  --color-neon-pink: #B0E4CC;
+  --color-neon-green: #B0E4CC;
+  --color-glass-bg: rgba(40, 90, 72, 0.06);
+  --color-glass-border: rgba(64, 138, 113, 0.2);
+  --color-glass-hover: rgba(64, 138, 113, 0.12);
   --font-inter: 'Inter', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-space: 'Space Grotesk', sans-serif;
@@ -30,7 +30,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #050816;
+  background: #091413;
   color: #e2e8f0;
   overflow-x: hidden;
   min-height: 100vh;
@@ -66,10 +66,10 @@ body {
 
 /* ───── Space Background ───── */
 .space-bg {
-  background: radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 20%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
-              radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
-              #050816;
+  background: radial-gradient(ellipse at 20% 50%, rgba(40, 90, 72, 0.12) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(64, 138, 113, 0.1) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 80%, rgba(49, 106, 87, 0.08) 0%, transparent 50%),
+              #091413;
 }
 
 /* ───── Float Animations ───── */
@@ -281,7 +281,7 @@ body {
 
 /* ───── Gradient Text ───── */
 .gradient-text {
-  background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #00d4ff 100%);
+  background: linear-gradient(135deg, #408A71 0%, #285A48 50%, #B0E4CC 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
